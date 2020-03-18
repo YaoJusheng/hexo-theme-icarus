@@ -19,12 +19,20 @@
         return '';
     } %>
     <section class="section">
-        <div class="container">
+        <div class="container" style="margin-left: 0px;margin-right: 0px;">
             <div class="columns">
-                <div class="column <%= main_column_class() %> has-order-2 column-main"><%- body %></div>
+              <% if (page.path === 'index.html') { %>
+                <div class="column <%= main_column_class() %> has-order-2 column-main threeLine"><%- body %></div>
+              <% } else { %>
+                  <div class="column <%= main_column_class() %> has-order-2 column-main twoLine"><%- body %></div>
+              <% } %>
+                
                 <%- _partial('common/widget', { position: 'left' }) %>
-                <%- _partial('common/widget', { position: 'right' }) %>
+                <% if (page.path === 'index.html') { %>
+                  <%-  _partial('common/widget', { position: 'right' }) %>
+                <% } %>
             </div>
+            
         </div>
     </section>
     

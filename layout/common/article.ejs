@@ -48,11 +48,22 @@
         <div class="content">
             <%- index && post.excerpt ? post.excerpt : post.content %>
         </div>
+        <% if (!index) { %>
+          <div>
+              <ul class="post-copyright">
+                  <li><strong>本文标题：</strong><a href="<%- url_for(post.link ? post.link : post.path) %>"><%= post.title %></a></li>
+                  <li><strong>本文作者：</strong><a href="<%- config.url %><%- config.root %>"><%- config.author %></a></li>
+                  <li><strong>本文链接：</strong><a href="<%- url_for(post.link ? post.link : post.path) %>"><%- config.url %><%- config.root %><%- post.path %></a></li>
+                  <li><strong>发布时间：</strong><%= date(post.date) %></li>
+                  <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+              </ul>
+          </div><br>
+        <% } %>
         <% if (!index && post.tags && post.tags.length) { %>
         <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <span class="is-size-6 has-text-grey has-mr-7"><i class="fa fa-tag" aria-hidden="true"></i></span>
                     <%- list_tags(post.tags, {
                         class: 'has-link-grey ',
                         show_count: false,
