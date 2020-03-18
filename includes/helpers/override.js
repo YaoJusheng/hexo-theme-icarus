@@ -101,7 +101,7 @@ module.exports = function (hexo) {
      *    }
      * }
      */
-    hexo.extend.helper.register('_toc', (content) => {
+    hexo.extend.helper.register('_toc', (content, number) => {
         const $ = cheerio.load(content, { decodeEntities: false });
         const toc = {};
         const levels = [0, 0, 0];
@@ -137,7 +137,11 @@ module.exports = function (hexo) {
             }
             node.id = id;
             node.text = text;
-            node.index = levels.slice(0, level + 1).join('.');
+            if (number == true) {
+              node.index = levels.slice(0, level + 1).join('.');
+            } else {
+              node.index = '';
+            }
         });
         return toc;
     });

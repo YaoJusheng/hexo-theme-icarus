@@ -24,7 +24,21 @@
     }
     return result;
 } %>
-<% let tocContent = buildToc(_toc(content)); if (tocContent !== undefined && tocContent !== ''){ %>
+
+<script> 
+  const index_list = document.getElementsByClassName('has-mr-6');
+  function changeNumStyle(num) {
+    if (num==false) {
+      for (let index of index_list) {
+        index.style.margin='0';
+      }
+    }
+  }
+  changeNumStyle(<%= theme.toc_number %>); 
+</script>
+ 
+
+<% let tocContent = buildToc(_toc(content, theme.toc_number )); if (tocContent !== undefined && tocContent !== ''){ %>
     <div class="card widget" id="toc">
         <div class="card-content">
             <div class="menu">

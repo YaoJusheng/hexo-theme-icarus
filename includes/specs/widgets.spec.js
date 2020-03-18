@@ -36,7 +36,7 @@ const DEFAULT_WIDGETS = [
     },
     {
         type: 'toc',
-        position: 'left'
+        position: 'left',
     },
     {
         type: 'links',
