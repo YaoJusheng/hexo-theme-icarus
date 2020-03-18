@@ -55,3 +55,61 @@
 .ins-section .ins-search-item:hover .ins-slug, .ins-section .ins-search-item.active .ins-slug, .ins-section .ins-search-item:hover .ins-search-preview, .ins-section .ins-search-item.active .ins-search-preview {
     color: #fff;
 }
+
+/* 重定义布局样式 */
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.column-main {
+  width: 70% !important;
+}
+
+.column-right, .column-left {
+  width: 24% !important;
+}
+
+
+.footer, .level {
+  width: 100%;
+  margin: auto 0 !important;
+  padding: auto 0 !important;
+}
+
+body {
+  background-color: #8fb8c5;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-position:50% 50%;
+  opacity: 0.8;
+}
+.container {
+  opacity: 0.9;
+}
+
+figure > img {
+  margin: 0;
+  padding: auto;
+  display: inline-block;
+  /* 头像圆形 */
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  box-shadow: inset 0 -1px 0 #333sfs;
+  /* 鼠标经过头像旋转360度 */
+  -webkit-transition: -webkit-transform 1.0s ease-out;
+  -moz-transition: -moz-transform 1.0s ease-out;
+  transition: transform 1.0s ease-out;
+}
+
+img:hover {
+  /* 鼠标经过停止头像旋转
+  -webkit-animation-play-state:paused;
+  animation-play-state:paused;*/
+  /* 鼠标经过头像旋转360度 */
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  transform: rotateZ(360deg);
+}

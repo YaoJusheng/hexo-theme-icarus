@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html <%- has_config('language') ? ' lang="' + get_config('language').substring(0, 2) + '"' : '' %>>
 <head>
     <%- _partial('common/head') %>
@@ -25,11 +27,15 @@
             </div>
         </div>
     </section>
+    
     <%- _partial('common/footer') %>
     <%- _partial('common/scripts') %>
 
     <% if (has_config('search.type')) { %>
     <%- _partial('search/' + get_config('search.type')) %>
     <% } %>
+
+    <%- _partial('custom') %>
+
 </body>
 </html>
