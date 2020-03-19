@@ -60,7 +60,7 @@ article:
   highlight:
     # Code highlight themes
     # https://github.com/highlightjs/highlight.js/tree/master/src/styles
-    theme: atom-one-light
+    theme: atom-one-dark
     # Show code copying button
     clipboard: true
     # Default folding status of the code blocks. Can be "", "folded", "unfolded"
@@ -265,12 +265,12 @@ special_efficacy:
 # see: https://www.tidiochat.com
 tidio:
   enable: true
-  key: '' # Public_Key
+  key: 'qx7yy2jzlookfjotrie45hnvrakcr9xc' # Public_Key
 
 # 2、Daovoice DaoCloud 在线沟通
 daovoice: 
   enable: false 
-  app_id: ""   # 6d0092ef/ eb35ef31
+  app_id: "6d0092ef"   # 6d0092ef/ eb35ef31
 
 # CDN provider settings
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/

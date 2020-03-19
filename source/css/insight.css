@@ -60,11 +60,14 @@
 .section {
   margin: auto;
   padding: 10px 0 10px 8px;
+  background: url(/blog/images/background/others/11.jpg) no-repeat 100%;
+  background-size:cover;
   background-color: #8fb8c5;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-attachment:fixed;
-  background-position:50% 50%;
+  /* background-position:50% 50%; */
   opacity: 0.8;
+  filter:alpha(opacity=80);
 }
 
 .navbar-main {
@@ -87,11 +90,11 @@
   padding: 10px 0 !important;
 }
 
-.column-right {
+/* .column-right {
   width: 27% !important;
-}
+} */
 .column-left {
-  width: 22% !important;
+  /* width: 22% !important; */
   overflow:hidden;
   text-overflow:ellipsis;
 }

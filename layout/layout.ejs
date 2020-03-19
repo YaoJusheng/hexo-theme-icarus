@@ -21,16 +21,15 @@
     <section class="section">
         <div class="container" style="margin-left: 0px;margin-right: 0px;">
             <div class="columns">
-              <% if (page.path === 'index.html') { %>
+              <% if (page.path === 'index.html' || page.path.split('/')[0] === 'page') { %>
                 <div class="column <%= main_column_class() %> has-order-2 column-main threeLine"><%- body %></div>
+                <%-  _partial('common/widget', { position: 'right' }) %>
               <% } else { %>
                   <div class="column <%= main_column_class() %> has-order-2 column-main twoLine"><%- body %></div>
               <% } %>
                 
-                <%- _partial('common/widget', { position: 'left' }) %>
-                <% if (page.path === 'index.html') { %>
-                  <%-  _partial('common/widget', { position: 'right' }) %>
-                <% } %>
+              <%- _partial('common/widget', { position: 'left' }) %>
+                
             </div>
             
         </div>
