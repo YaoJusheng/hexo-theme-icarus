@@ -265,7 +265,7 @@ special_efficacy:
 # see: https://www.tidiochat.com
 tidio:
   enable: true
-  key: 'qx7yy2jzlookfjotrie45hnvrakcr9xc' # Public_Key
+  key: '' # Public_Key
 
 # 2、Daovoice DaoCloud 在线沟通
 daovoice: 
