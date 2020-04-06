@@ -33,7 +33,10 @@ navbar:
     归档: /archives
     分类: /categories
     标签: /tags
-    关于: /about
+    关于: http://yaojusheng.gitee.io/resume
+    静态简历: http://yaojusheng.gitee.io/static-resume
+    动态简历: http://yaojusheng.gitee.io/dynamic-resume
+    简历制作: http://yaojusheng.gitee.io/online-resume
   # Navigation bar links to be shown on the right
   links:
     Download on GitHub:
